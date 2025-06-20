@@ -21,3 +21,8 @@
         response.send("auth/reset-password Get huselt irlee");
     }
     
+
+
+    // MongoDB password 
+    // baataraagarig
+    // Ta5DddCWCg60YEJH
