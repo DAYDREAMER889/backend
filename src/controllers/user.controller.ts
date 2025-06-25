@@ -8,6 +8,13 @@ export const signIn = async (request: Request, response: Response) => {
 
     const user = await User.findOne({ name });
 
+    if (!user || !user.password) {
+      return response.status(200).json({
+        success: false,
+        message: "not authenticated",
+      });
+    }
+
     bcrypt.compare(password, user.password, (err, result) => {
       if (result) {
         response.status(200).json({
