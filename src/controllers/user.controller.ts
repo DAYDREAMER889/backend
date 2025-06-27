@@ -61,4 +61,3 @@ export const signUp = async (request: Request, response: Response) => {
     });
   }
 };
- 

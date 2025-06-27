@@ -1,11 +1,11 @@
 import express from "express";
 
 import {
-    getAllCategory,
-    createCategory,
-    deleteCategory,
-    uptadeCategory,
-} from "../controllers/category.controller.js"
+  getAllCategory,
+  createCategory,
+  deleteCategory,
+  uptadeCategory,
+} from "../controllers/category.controller.js";
 
 const categoryRouter = express.Router();
 
@@ -14,7 +14,4 @@ categoryRouter.post("/", createCategory);
 categoryRouter.patch("/foodCategoryId", uptadeCategory);
 categoryRouter.delete("/foodCategoryId", deleteCategory);
 
-
 export default categoryRouter;
-
-

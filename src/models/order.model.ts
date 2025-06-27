@@ -1,24 +1,21 @@
 import mongoose from "mongoose";
 
-const {Schema, model} = mongoose;
+const { Schema, model } = mongoose;
 
-const order = new Schema ({
-  
-    user: {
+const order = new Schema({
+  user: {
     type: Schema.Types.ObjectId,
     ref: "Users",
+  },
+  totalPrice: Number,
+  FoodOrderItems: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "Food",
     },
-    totalPrice: Number,
-    FoodOrderItems: [
-        {
-            type: Schema.Types.ObjectId,
-            ref: "Food",
-        }
-    ],
-      createdAt: Date,
-      updatedAt: Date,
-    },
-  
-);
+  ],
+  createdAt: Date,
+  updatedAt: Date,
+});
 
-export const Order = model("Order", order)
+export const Order = model("Order", order);

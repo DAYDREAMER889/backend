@@ -1,7 +1,6 @@
 import { Request, Response } from "express";
 import { Food } from "../models/food.model.js";
 
-
 export const getAllFoods = async (request: Request, response: Response) => {
   try {
     const foods = await Food.find();
@@ -17,7 +16,6 @@ export const getAllFoods = async (request: Request, response: Response) => {
     });
   }
 };
-
 
 export const createFood = async (request: Request, response: Response) => {
   try {
@@ -57,7 +55,6 @@ export const getFoodByid = async (request: Request, response: Response) => {
   }
 };
 
-
 export const updateFood = async (request: Request, response: Response) => {
   try {
     const { foodId } = request.params;
@@ -78,5 +75,3 @@ export const updateFood = async (request: Request, response: Response) => {
     });
   }
 };
- 
-
